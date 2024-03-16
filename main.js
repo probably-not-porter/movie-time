@@ -9,7 +9,10 @@ var colors = [
     "#F6C2F3"
 ]
 var wheel = null;
-
+async function reset(){
+    localStorage.removeItem("sheetid");
+    location.reload();
+}
 function getSheet(id){
     document.getElementById("sheet").style.display = "none";
     document.getElementById("wheel").innerHTML = "Loading...";
@@ -20,6 +23,7 @@ function getSheet(id){
         }
         else{
             DATA = data;
+            localStorage['sheetid'] = id;
             document.getElementById("controls").style.display = "inline-block";
             document.getElementById("spinbutton").style.display = "inline-block";
             getGroup();
@@ -102,3 +106,12 @@ function renderWheel(input){
     // 3. Create the wheel in the container and initialise it with the props:
     wheel = new spinWheel.Wheel(container, props);
 }
+
+$( document ).ready(function() {
+    if (localStorage['sheetid'] != null){
+        console.log("Existing ID");
+        getSheet(localStorage['sheetid'])
+    }else{
+        console.log("No existing ID");
+    }
+});
