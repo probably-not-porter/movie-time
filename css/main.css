@@ -4,6 +4,7 @@
 }
 html{
     background: rgb(111, 116, 134);
+    overflow:hidden 
 }
 #sheet{
     padding: 20px;
@@ -70,3 +71,28 @@ h4{
 #sheetid-input:focus {
     outline: 1px solid rgba(255,255,255,0.5);
 }
+
+.particlesContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+  }
+  
+  .particle {
+    display: inline-flex;
+    position: absolute;
+    height: 2rem;
+    width: 2rem;
+    left: 0;
+    right: 0;
+    top: 100%;
+    margin: auto;
+  }
+  
+  img{
+    width: 40px;
+    height: 40px;
+  }
