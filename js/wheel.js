@@ -9,7 +9,10 @@ var colors = [
 ]
 var wheel = null;
 
-function createWheel(data){
+
+
+function createWheel(){
+    console.log(data);
     var filterdata = data;
 
     if(document.getElementById('unwatched').checked){

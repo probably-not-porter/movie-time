@@ -13,13 +13,13 @@
         <div id="controls">
             <div class="radiogroup">
                 <h4>Filter by Watched</h4>
-                <input onchange='createWheel()' type="radio" id="unwatched" name="watched_filter" value="True" checked>
+                <input onchange='createWheel(data)' type="radio" id="unwatched" name="watched_filter" value="True" checked>
                 <label for="unwatched">Unwatched</label>
                 <br>
-                <input onchange='createWheel()' type="radio" id="watched" name="watched_filter" value="False">
+                <input onchange='createWheel(data)' type="radio" id="watched" name="watched_filter" value="False">
                 <label for="watched">Watched</label>
                 <br>
-                <input onchange='createWheel()' type="radio" id="all" name="watched_filter" value="null">
+                <input onchange='createWheel(data)' type="radio" id="all" name="watched_filter" value="null">
                 <label for="all">All</label>
             </div>
             <div id='group' class="radiogroup">
@@ -38,14 +38,14 @@
         <div id="wheel">
         </div>
         <button id='spinbutton' style="display: none; font-size: 20px;" onclick="wheel.spin(rotationSpeed = 1000)">Spin. That. Wheel.</button>
-        
+        <script src="js/global.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://cdn.jsdelivr.net/npm/spin-wheel@4.3.1/dist/spin-wheel-iife.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/public-google-sheets-parser@latest"></script>
         <script src="js/feedback.js"></script>
-        <script src="js/getFilters.js"></script>
         <script src="js/sheet.js"></script>
-        <script src="js/wheel.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/wheel.js"></script>
+        <script src="js/getFilters.js"></script>
     </body>
 </html>
