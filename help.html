@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Movie Time - Help</title>
+        <link rel="stylesheet" href="css/main.css" />
+    </head>
+    <body>
+        <h1>How does this work?</h1>
+        <p1>
+            This tool provides an easy to configure spinning wheel for Movie Night.<br>
+            In order to use it, you need a public Google Sheet to keep track of your movies.<br>
+            You can use this tool for yourself, or modify or change anything for personal use.<br>
+            The source code can be found <a href="https://github.com/probably-not-porter/movie-time">here</a>.
+        </p1>
+
+        <h3>Google Sheet ID?</h3>
+        <p1>
+            After you create your Google Sheet using the format below, you can paste in the "ID" number from the Sheet.<br>
+            The ID is a long string of random characters that identifies your Sheet (Don't worry, info is only saved on your browser).<br>
+            If you are unsure which part of the URL is the ID, it's probably between the <span style='color: yellow'>/spreadsheets/d/</span> and <span style='color: yellow'>/edit</span> in your browser.
+        </p1>
+
+        <h3>Format Guide</h3>
+        <p1>
+            You can have as many columns as you want in your spreadsheet.<br>
+            The only requirement is that is has the following: <span style='color: yellow'>Title</span>, <span style='color: yellow'>Type</span>, <span style='color: yellow'>Suggester</span>, and <span style='color: yellow'>Watched</span>.<br>
+            (This is case sensitive)<br>
+            The <span style='color: yellow'>Watched</span> column is true/false, and can be replaced by a checkbox or anything else that returns true/false values.<br>
+            <span style='color: yellow'>Type</span> and <span style='color: yellow'>Suggester</span> are case sensitive for values too, and can be used to sort movies on the wheel.<br>
+
+            <br>EXAMPLE:
+
+        </p1>
+        <table style="margin: 0 auto;">
+            <tr>
+                <th>Title</th>
+                <th>Type</th>
+                <th>Suggester</th>
+                <th>Watched</th>
+            </tr>
+            <tr>
+                <td>Spongebob</td>
+                <td>Show</td>
+                <td>Alice</td>
+                <td>true</td>
+            </tr>
+            <tr>
+                <td>Monsters Inc</td>
+                <td>Movie</td>
+                <td>Bob</td>
+                <td>false</td>
+            </tr>
+          </table>
+    </body>
+</html>

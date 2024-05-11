@@ -6,12 +6,13 @@ var audioVol = 0.05
 var getRandomInteger = function(min, max){
     return Math.floor(Math.random() * (max-min+1)) + min
 }
+var audio = new Audio('media/nes-02-14.wav');
 
 function sound(){
-    var audio = new Audio('media/nes-02-14.wav');
-    audio.volume = audioVol;
-    audio.play();
-    emoji()
+    let newaudio = audio.cloneNode()
+    newaudio.volume = audioVol;
+    newaudio.play();
+    emoji();
 }
 
 function emoji(){
