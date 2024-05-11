@@ -17,6 +17,12 @@ async function getSheet(id){
     }
 }
 
+// get NEW sheet
+async function getNewSheet(id){
+    await getSheet(id);
+    location.reload();
+}
+
 // reset local storage Sheet ID
 async function reset(){
     localStorage.removeItem("sheetid");

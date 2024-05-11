@@ -1,16 +1,4 @@
-var colors = [
-    "#F09EA7",
-    "#F6CA94",
-    "#FAFABE",
-    "#C1EBC0",
-    "#C7CAFF",
-    "#CDABEB",
-    "#F6C2F3"
-]
 var wheel = null;
-
-
-
 function createWheel(){
     console.log(data);
     var filterdata = data;
