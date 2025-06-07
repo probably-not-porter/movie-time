@@ -1,6 +1,5 @@
 var wheel = null;
 function createWheel() {
-    console.log(data);
     var filterdata = data;
 
     if (document.getElementById("unwatched").checked) {
@@ -50,13 +49,15 @@ function renderWheel(input) {
         pointerAngle: 90,
         rotationSpeedMax: 1000,
         rotationResistance: -200,
+        borderColor: "#fff",
+        lineColor: "#fff",
+        itemLabelColors: ["#fff"],
     };
-    console.log(props);
 
     // 2. Decide where you want it to go:
     const container = document.getElementById("wheel");
 
     // 3. Create the wheel in the container and initialise it with the props:
     wheel = new spinWheel.Wheel(container, props);
-    wheel.onCurrentIndexChange = sound;
+    wheel.onCurrentIndexChange = feedback;
 }

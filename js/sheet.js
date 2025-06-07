@@ -1,4 +1,4 @@
-async function getSheet(id){
+async function getSheet(id) {
     document.getElementById("sheet").style.display = "none";
     document.getElementById("wheel").innerHTML = "Loading...";
     try {
@@ -7,8 +7,7 @@ async function getSheet(id){
         if (result.length === 0) {
             alert("No data found, or something is wrong with this Sheet ID...");
         } else {
-            localStorage['sheetid'] = id;
-            console.log(result);
+            localStorage["sheetid"] = id;
             return result;
         }
     } catch (error) {
@@ -18,13 +17,13 @@ async function getSheet(id){
 }
 
 // get NEW sheet
-async function getNewSheet(id){
+async function getNewSheet(id) {
     await getSheet(id);
     location.reload();
 }
 
 // reset local storage Sheet ID
-async function reset(){
+async function reset() {
     localStorage.removeItem("sheetid");
     location.reload();
 }

@@ -2,7 +2,6 @@ function getFilters() {
     var group = [];
     var types = [];
     for (x = 0; x < data.length; x++) {
-        console.log(data[x]);
         if (data[x].title != "" && "Title" in data[x]) {
             let name = data[x]["Suggester"];
             let type = data[x]["Type"];
